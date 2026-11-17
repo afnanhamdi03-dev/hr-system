@@ -8,6 +8,7 @@
 /* ===== الإعدادات: الصقي هنا رابط ومفتاح Supabase ===== */
 window.HR_CONFIG = {
   company: "آيا",
+  logo: "",          /* اسم ملف الشعار في المستودع، مثال: logo.png */
   supabaseUrl: "",   /* مثال: https://abcdxyz.supabase.co */
   supabaseKey: ""    /* المفتاح العام anon public */
 };
@@ -408,6 +409,75 @@ a.att:hover{border-color:var(--accent);color:var(--accent)}
 .quick{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
 .quick::-webkit-scrollbar{display:none}
 .quick .btn{flex:none}
+
+/* handbook */
+.brand-img{width:42px;height:42px;border-radius:13px;object-fit:contain;background:#fff;padding:3px}
+.set-logo{height:44px;max-width:140px;object-fit:contain}
+.hb-cover{display:flex;gap:22px;align-items:center;border-radius:26px;padding:32px 30px;color:#fff;position:relative;overflow:hidden;background:radial-gradient(90% 120% at 100% 0%,#B3456D 0%,transparent 55%),linear-gradient(140deg,#4A0F27,#7A1F45 60%,#8E2D52);box-shadow:0 26px 50px -26px rgba(80,15,40,.75)}
+.hb-cover::after{content:"";position:absolute;inset-inline-start:-60px;bottom:-120px;width:300px;height:300px;border-radius:50%;border:1px solid rgba(255,255,255,.14)}
+.hb-cover h1{color:#fff;font-size:30px;margin:4px 0 8px}
+.hb-cover p{margin:0;opacity:.88;max-width:560px}
+.hb-kicker{font-size:13px;letter-spacing:.3px;background:rgba(255,255,255,.14);padding:3px 12px;border-radius:99px}
+.hb-logo{width:96px;height:96px;object-fit:contain;background:#fff;border-radius:22px;padding:10px;flex:none}
+.hb-logo-txt{width:96px;height:96px;font-size:44px;border-radius:24px;flex:none;background:rgba(255,255,255,.14);box-shadow:none}
+.hb-toc{display:flex;gap:8px;overflow-x:auto;padding:2px 0 4px;scrollbar-width:none;position:sticky;top:66px;z-index:4;background:linear-gradient(var(--bg) 70%,transparent)}
+.hb-toc::-webkit-scrollbar{display:none}
+.hb-chip{flex:none;display:inline-flex;align-items:center;gap:8px;border:1px solid var(--line);background:var(--surface);border-radius:99px;padding:7px 14px 7px 8px;cursor:pointer;font-size:13.5px;font-weight:500;transition:border-color .15s}
+.hb-chip span{width:22px;height:22px;border-radius:50%;background:var(--accent-soft);color:var(--accent);display:grid;place-items:center;font-size:12px;font-weight:700}
+.hb-chip:hover{border-color:var(--accent)}
+.hb-chip.warn span{background:var(--bad-soft);color:var(--bad)}
+.hb-search{width:100%}
+.hb-sec{scroll-margin-top:120px;display:flex;flex-direction:column;gap:14px;padding:22px}
+.hb-sec h3{font-size:16px;margin-top:6px}
+.hb-sec p{margin:0;line-height:1.85}
+.hb-warn{border-color:color-mix(in srgb,var(--bad) 35%,var(--line));box-shadow:0 0 0 4px var(--bad-soft)}
+.hb-head{display:flex;gap:14px;align-items:center}
+.hb-idx{font-family:var(--display);font-size:30px;color:var(--accent);opacity:.35;line-height:1}
+.hb-warn .hb-idx{color:var(--bad);opacity:.6}
+.hb-steps{display:flex;flex-direction:column;gap:10px}
+.hb-step{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:14px;background:var(--sunk)}
+.hb-step p{margin:3px 0 0;color:var(--muted);font-size:14px;line-height:1.75}
+.hb-n{width:28px;height:28px;border-radius:9px;background:var(--accent);color:var(--accent-ink);display:grid;place-items:center;font-weight:700;font-size:13px;flex:none}
+.law{display:inline-flex;align-items:center;font-size:11.5px;font-weight:700;padding:0 7px;border-radius:6px;background:var(--accent-soft);color:var(--accent);white-space:nowrap;vertical-align:1px}
+.callout{border-radius:14px;padding:14px 16px;background:var(--info-soft);color:var(--ink);border:1px solid color-mix(in srgb,var(--info) 25%,var(--line))}
+.callout.warn{background:var(--warn-soft);border-color:color-mix(in srgb,var(--warn) 30%,var(--line))}
+.callout ul,.case ul{margin:6px 0 0;padding-inline-start:20px;display:flex;flex-direction:column;gap:4px;font-size:14px}
+.callout .pills{display:flex;flex-wrap:wrap;gap:6px;margin:8px 0}
+.formula{border-radius:16px;padding:16px 18px;background:linear-gradient(135deg,var(--accent-soft),var(--surface));border:1px solid color-mix(in srgb,var(--accent) 25%,var(--line));display:flex;flex-direction:column;gap:4px}
+.formula span{font-size:12px;color:var(--accent);font-weight:700}
+.formula b{font-family:var(--display);font-size:18px}
+.formula small{color:var(--muted)}
+.example{border-inline-start:4px solid var(--ok);background:var(--ok-soft);padding:11px 14px;border-radius:10px;font-size:14.5px}
+.case{border:1px solid var(--line);border-radius:14px;padding:14px}
+.case.ok{border-top:4px solid var(--ok)}.case.bad{border-top:4px solid var(--bad)}
+.calc{display:grid;grid-template-columns:1.2fr 1fr;gap:14px;border:1px dashed color-mix(in srgb,var(--accent) 40%,var(--line));border-radius:16px;padding:14px}
+.calc-in{display:flex;flex-direction:column;gap:10px}
+.calc-out{background:var(--sunk);border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;gap:3px;justify-content:center}
+.calc-out span{font-size:12.5px;color:var(--muted)}
+.calc-out b{font-family:var(--display);font-size:19px}
+.calc-out b.big{font-size:28px;color:var(--accent)}
+.calc-out small{color:var(--muted);font-size:12.5px;margin-top:4px}
+.tiers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.tier{border-radius:12px;padding:10px;text-align:center;display:flex;flex-direction:column;gap:2px;background:var(--surface)}
+.tier b{font-family:var(--display);font-size:22px;line-height:1.1}
+.tier span{font-size:12px;color:var(--muted)}
+.tier small{font-size:12px;font-weight:600}
+.tier.ok{border-top:4px solid var(--ok)}.tier.warn{border-top:4px solid var(--warn)}.tier.bad{border-top:4px solid var(--bad)}
+.tiers.big .tier{padding:16px;background:var(--sunk)}
+.tiers.big .tier b{font-size:36px}
+.tbl{border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.tr{display:grid;grid-template-columns:1fr auto;gap:10px;padding:11px 16px;border-bottom:1px solid var(--line)}
+.tr:last-child{border-bottom:0}
+.tr.th{background:var(--sunk);font-size:13px;color:var(--muted);font-weight:600}
+.tr b{color:var(--accent)}
+.wlist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.witem{display:flex;gap:10px;padding:12px 14px;border-radius:14px;border:1px solid color-mix(in srgb,var(--bad) 20%,var(--line));background:color-mix(in srgb,var(--bad-soft) 55%,var(--surface))}
+.witem p{margin:3px 0 0;font-size:13.5px;color:var(--muted);line-height:1.7}
+.wic{width:24px;height:24px;border-radius:50%;background:var(--bad);color:#fff;display:grid;place-items:center;font-weight:700;flex:none;font-size:13px}
+.hb-foot{text-align:center;max-width:680px;margin:6px auto 0}
+@media (max-width:900px){.hb-cover{flex-direction:column;align-items:flex-start;padding:24px 20px}.hb-cover h1{font-size:24px}.hb-logo,.hb-logo-txt{width:72px;height:72px}.calc{grid-template-columns:1fr}.wlist{grid-template-columns:1fr}.hb-toc{top:58px}.tiers.big .tier b{font-size:28px}}
+.calc>*{min-width:0}.calc .in{width:100%;min-width:0;max-width:100%}
+@media (max-width:900px){.calc{grid-template-columns:minmax(0,1fr)}}
 :root{--display:"Readex Pro","IBM Plex Sans Arabic",system-ui,sans-serif;--body:"IBM Plex Sans Arabic",system-ui,"Segoe UI",Tahoma,sans-serif}
 .top{padding-top:calc(14px + env(safe-area-inset-top))}
 </style>
@@ -471,10 +541,10 @@ const TYPES = {
   },
   gov_payment: {
     label: 'مدفوعات حكومية', group: 'pay', color: 'green',
-    steps: () => [
-      mk('hr', 'إعداد الموارد البشرية', 1, ['مطابقة المبلغ مع الفاتورة في المنصة', 'رقم فاتورة سداد مسجّل']),
+    steps: (r) => [
+      mk('hr', 'إعداد الموارد البشرية', 1, r.category === 'تصاديق الغرفة التجارية' ? ['المستند جاهز وموقّع ومختوم', 'رفع طلب التصديق في منصة الغرفة التجارية'] : ['مطابقة المبلغ مع الفاتورة في المنصة', 'رقم فاتورة سداد مسجّل']),
       mk('finance', 'اعتماد المالية', 1, ['اعتماد المبلغ']),
-      mk('finance', 'السداد', 1, ['تم السداد قبل تاريخ الاستحقاق', 'حفظ إيصال السداد'])
+      mk('finance', 'السداد', 1, r.category === 'تصاديق الغرفة التجارية' ? ['سداد رسوم التصديق', 'استلام المستند المصدّق وتسليمه للموظف'] : ['تم السداد قبل تاريخ الاستحقاق', 'حفظ إيصال السداد'])
     ]
   },
   labor_payment: {
@@ -514,8 +584,10 @@ const TYPES = {
 };
 
 const LEAVE_TYPES = ['سنوية', 'مرضية', 'اضطرارية', 'زواج', 'وفاة', 'مولود', 'بدون راتب'];
-const GOV_CATS = ['التأمينات الاجتماعية', 'رسوم رخص العمل (قوى)', 'تجديد إقامة (مقيم)', 'تأشيرات', 'المقابل المالي', 'رسوم نقل خدمات'];
-const LABOR_CATS = ['مسير الرواتب', 'مستحقات نهاية خدمة', 'بدل إجازة', 'تذاكر سفر', 'تعويض'];
+const GOV_CATS = ['التأمينات الاجتماعية', 'رسوم رخص العمل (قوى)', 'تجديد إقامة (مقيم)', 'تأشيرات', 'المقابل المالي', 'رسوم نقل خدمات', 'تصاديق الغرفة التجارية'];
+const CHAMBER = 'تصاديق الغرفة التجارية';
+const CHAMBER_DOCS = ['تعريف بالراتب', 'شهادة خبرة', 'عقد عمل', 'خطاب لجهة حكومية', 'تفويض', 'مستندات أخرى'];
+const LABOR_CATS = ['مسير الرواتب', 'مستحقات نهاية خدمة', 'صرف سلفة', 'بدل إجازة', 'تذاكر سفر', 'تعويض'];
 const STAGES = ['جديد', 'فرز أولي', 'مقابلة أولى', 'مقابلة نهائية', 'عرض وظيفي', 'تم التعيين'];
 
 /* ---------- dates ---------- */
@@ -625,7 +697,7 @@ function demoData(todayIso, cfg) {
   const requests = [
     req('r1', { type: 'leave', employeeId: 'e4', leaveType: 'سنوية', from: A(12), to: A(18), days: 7, reason: 'سفر عائلي' }, { created: -4, ticks: [0] }),
     req('r2', { type: 'leave', employeeId: 'e9', leaveType: 'مرضية', from: A(-2), to: A(0), days: 3, reason: 'وعكة صحية' }, { created: -2, done: [1] }),
-    req('r3', { type: 'advance', employeeId: 'e8', amount: 4000, months: 4, reason: 'ظرف عائلي' }, { created: -3, done: [1] }),
+    req('r3', { type: 'advance', employeeId: 'e8', amount: 4000, months: 6, reason: 'ظرف عائلي' }, { created: -3, done: [1] }),
     req('r4', { type: 'gov_payment', category: 'التأمينات الاجتماعية', amount: 21840, dueDate: A(4), ref: 'SADAD-88214', reason: 'اشتراكات شهر نوفمبر' }, { created: -1, done: [0] }),
     req('r5', { type: 'gov_payment', category: 'تجديد إقامة (مقيم)', employeeId: 'e8', amount: 650, dueDate: A(-1), reason: 'تجديد إقامة سنة' }, { created: -6, done: [1, 2] }),
     req('r6', { type: 'labor_payment', category: 'مسير الرواتب', amount: 198400, dueDate: A(10), reason: 'رواتب نوفمبر (٢٦ أكتوبر - ٢٥ نوفمبر)' }, { created: 0 }),
@@ -633,6 +705,7 @@ function demoData(todayIso, cfg) {
     req('r8', { type: 'raise', employeeId: 'e5', newBasic: 13500, effective: A(14), reason: 'تقييم أداء ممتاز وتوسّع في المسؤوليات' }, { created: -8, done: [2], returned: 'يرجى إرفاق نتيجة تقييم الأداء الأخير قبل الاعتماد' }),
     req('r9', { type: 'hiring', employeeId: 'e3', position: 'أخصائي/ة عمليات موارد بشرية', dept: 'الموارد البشرية', headcount: 1, budget: 12000, reason: 'دعم التوسع بعد جولة التمويل' }, { created: -10, done: [1, 3, 4] }),
     req('r10', { type: 'permission', employeeId: 'e10', date: A(1), fromTime: '13:00', toTime: '15:00', hours: 2, reason: 'مراجعة دائرة حكومية' }, { created: 0 }),
+    req('r12', { type: 'gov_payment', category: 'تصاديق الغرفة التجارية', docType: 'تعريف بالراتب', employeeId: 'e9', amount: 120, dueDate: A(2), reason: 'تصديق تعريف بالراتب لجهة تمويلية' }, { created: -1, done: [0] }),
     req('r11', { type: 'expense', amount: 2400, vendor: 'منصة تدريب', reason: 'دورة نظام العمل للفريق', employeeId: '' }, { created: -2, done: [1] })
   ];
   // r3 advance: employee e8 has a manager but advance has no manager step — fine.
@@ -1083,7 +1156,8 @@ const NAV = [
   ['perf', 'قياس الأداء', 'chart', () => ['hr_admin', 'hr', 'ceo', 'manager', 'employee'].includes(role())],
   ['dates', 'التواريخ المهمة', 'cal', () => ['hr_admin', 'hr', 'ceo'].includes(role())],
   ['team', 'الفريق والإعدادات', 'gear', () => baseRole() === 'hr_admin' && !S.simRole],
-  ['guide', 'دليل الاستخدام', 'book', () => true]
+  ['handbook', 'دليل الموظف', 'book', () => true],
+  ['guide', 'دليل النظام', 'doc', () => true]
 ];
 function go(v) { S.view = v; try { history.replaceState(null, '', '#' + v); } catch (e) { } closeModal(); window.scrollTo(0, 0); schedule(); }
 
@@ -1096,7 +1170,7 @@ function render() {
   const q = myQueue().length;
   const cur = navs.find(n => n[0] === S.view);
   root.innerHTML =
-    '<div class="app"><aside class="rail"><div class="brand"><div class="logo">' + esc((S.settings.company || 'م')[0]) + '</div><div><b>' + esc(S.settings.company) + '</b><small>نظام الموارد البشرية</small></div></div>' +
+    '<div class="app"><aside class="rail"><div class="brand">' + (logoHtml('brand-img') || '<div class="logo">' + esc((S.settings.company || 'م')[0]) + '</div>') + '<div><b>' + esc(S.settings.company) + '</b><small>نظام الموارد البشرية</small></div></div>' +
     navs.map(n => '<button class="nav ' + (S.view === n[0] ? 'on' : '') + '" data-go="' + n[0] + '">' + ic(n[2]) + '<span>' + n[1] + '</span>' + (n[0] === 'requests' && q ? '<span class="badge num">' + q + '</span>' : '') + '</button>').join('') +
     '<div class="rail-foot">' + (S.myName ? '<b>' + esc(S.myName) + '</b><br>' : '') + esc(ROLES[role()]) + (S.live ? ' · متصل' : ' · معاينة') + (S.sb ? '<br><button class="btn sm ghost rail-out" data-signout="1">تسجيل الخروج</button>' : '') + '</div></aside><div class="main"><header class="top"><h1>' + cur[1] + '</h1><span class="sp"></span>' + roleBox() +
     (canWrite() && role() !== 'none' ? '<button class="btn pri" data-new="1">' + ic('plus') + '<span>طلب جديد</span></button>' : '') +
@@ -1221,10 +1295,21 @@ VIEWS.payments = function () {
   const late = openP.filter(r => r.dueDate && daysBetween(T, r.dueDate) < 0);
   const month = openP.filter(r => r.dueDate && r.dueDate.slice(0, 7) === T.slice(0, 7));
   const paid = ps.filter(r => r.status === 'approved');
-  const sec = (title, type, rows) => '<section class="card"><div class="card-h"><h2>' + title + '</h2><span class="sp"></span>' + (canWrite() && role() !== 'ceo' ? '<button class="btn sm" data-newtype="' + type + '">' + ic('plus') + 'إضافة</button>' : '') + '</div>' + (rows.length ? '<div class="scroll"><table class="tb"><thead><tr><th>البند</th><th>المبلغ</th><th>الاستحقاق</th><th>الحالة الآن</th></tr></thead><tbody>' + rows.map(r => { const n = r.dueDate ? daysBetween(T, r.dueDate) : null; const w = where(r); return '<tr data-req="' + esc(r.id) + '"><td><b>' + esc(r.category || r.reason || TYPES[r.type].label) + '</b><div class="small muted">' + esc(r.employeeId ? empName(r.employeeId) : (r.vendor || r.reason || '')) + '</div></td><td class="money">' + money(r.amount) + '</td><td>' + (r.dueDate ? fmtD(r.dueDate) + (r.status === 'in_progress' ? '<div class="small" style="color:' + (n < 0 ? 'var(--bad)' : n <= 7 ? 'var(--warn)' : 'var(--muted)') + '">' + rel(n) + '</div>' : '') : '—') + '</td><td>' + (r.status === 'in_progress' ? '<span class="pill ' + (w.over ? 'bad' : 'info') + '">' + esc(r.steps[r.cur].label) + '</span>' : '<span class="pill ' + ST_CLASS[r.status] + '">' + (r.status === 'approved' ? 'مدفوع' : ST_LABEL[r.status]) + '</span>') + '</td></tr>'; }).join('') + '</tbody></table></div>' : '<div class="empty">لا توجد بنود.</div>') + '</section>';
+  const sec = (title, type, rows, cat) => '<section class="card"><div class="card-h"><h2>' + title + '</h2><span class="sp"></span>' + (canWrite() && role() !== 'ceo' ? '<button class="btn sm" data-newtype="' + type + '"' + (cat ? ' data-cat="' + esc(cat) + '"' : '') + '>' + ic('plus') + 'إضافة</button>' : '') + '</div>' + (rows.length ? '<div class="scroll"><table class="tb"><thead><tr><th>البند</th><th>المبلغ</th><th>الاستحقاق</th><th>الحالة الآن</th></tr></thead><tbody>' + rows.map(r => { const n = r.dueDate ? daysBetween(T, r.dueDate) : null; const w = where(r); return '<tr data-req="' + esc(r.id) + '"><td><b>' + esc(r.category || r.reason || TYPES[r.type].label) + '</b><div class="small muted">' + esc((r.docType ? r.docType + ' · ' : '') + (r.employeeId ? empName(r.employeeId) : (r.vendor || r.reason || ''))) + '</div></td><td class="money">' + money(r.amount) + '</td><td>' + (r.dueDate ? fmtD(r.dueDate) + (r.status === 'in_progress' ? '<div class="small" style="color:' + (n < 0 ? 'var(--bad)' : n <= 7 ? 'var(--warn)' : 'var(--muted)') + '">' + rel(n) + '</div>' : '') : '—') + '</td><td>' + (r.status === 'in_progress' ? '<span class="pill ' + (w.over ? 'bad' : 'info') + '">' + esc(r.steps[r.cur].label) + '</span>' : '<span class="pill ' + ST_CLASS[r.status] + '">' + (r.status === 'approved' ? 'مدفوع' : ST_LABEL[r.status]) + '</span>') + '</td></tr>'; }).join('') + '</tbody></table></div>' : '<div class="empty">لا توجد بنود.</div>') + '</section>';
   return '<div class="kpis" style="grid-template-columns:repeat(3,minmax(0,1fr))"><div class="kpi ' + (late.length ? 'alert' : '') + '"><b class="num">' + money(sum(late)) + '</b><span>متأخر السداد (' + late.length + ')</span></div><div class="kpi"><b class="num">' + money(sum(month)) + '</b><span>مستحق هذا الشهر</span></div><div class="kpi"><b class="num">' + money(sum(paid)) + '</b><span>مدفوع ومكتمل</span></div></div>' +
-    sec('المدفوعات الحكومية', 'gov_payment', ps.filter(r => r.type === 'gov_payment')) + sec('المدفوعات العمالية', 'labor_payment', ps.filter(r => r.type === 'labor_payment')) + sec('طلبات صرف الموارد البشرية', 'expense', ps.filter(r => r.type === 'expense'));
+    sec('المدفوعات الحكومية', 'gov_payment', ps.filter(r => r.type === 'gov_payment' && r.category !== CHAMBER)) +
+    sec('تصاديق الغرفة التجارية', 'gov_payment', ps.filter(r => r.type === 'gov_payment' && r.category === CHAMBER), CHAMBER) +
+    sec('المدفوعات العمالية', 'labor_payment', ps.filter(r => r.type === 'labor_payment')) + advSection() +
+    sec('طلبات صرف الموارد البشرية', 'expense', ps.filter(r => r.type === 'expense'));
 };
+
+function advSection() {
+  const adv = S.data.requests.filter(r => r.type === 'advance' && canSee(r)).sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+  const open = adv.filter(r => r.status === 'in_progress' || r.status === 'approved');
+  const total = open.reduce((s, r) => s + (+r.amount || 0), 0), monthly = open.reduce((s, r) => s + (+r.amount || 0) / (+r.months || 1), 0);
+  return '<section class="card"><div class="card-h"><h2>السلف</h2><span class="pill acc num">' + money(total) + ' · قسط شهري ' + money(monthly) + '</span><span class="sp"></span>' + (canWrite() && role() !== 'ceo' ? '<button class="btn sm" data-newtype="advance">' + ic('plus') + 'إضافة</button>' : '') + '</div>' +
+    (adv.length ? '<div class="scroll"><table class="tb"><thead><tr><th>الموظف</th><th>المبلغ</th><th>الأقساط</th><th>القسط الشهري</th><th>الحالة الآن</th></tr></thead><tbody>' + adv.map(r => { const e = emp(r.employeeId), inst = (+r.amount || 0) / (+r.months || 1), pct = e ? Math.round(inst * 100 / (wage(e) || 1)) : 0, w = where(r); return '<tr data-req="' + esc(r.id) + '"><td><b>' + esc(empName(r.employeeId)) + '</b><div class="small muted">' + esc(r.reason || '') + '</div></td><td class="money">' + money(r.amount) + '</td><td class="num">' + (r.months || 1) + ' شهر</td><td><span class="money">' + money(inst) + '</span><div class="small" style="color:' + (pct > 10 ? 'var(--bad)' : 'var(--muted)') + '">' + pct + '٪ من الأجر' + (pct > 10 ? ' · يتجاوز حد م ٩٢' : '') + '</div></td><td>' + (r.status === 'in_progress' ? '<span class="pill ' + (w.over ? 'bad' : 'info') + '">' + esc(r.steps[r.cur].label) + '</span>' : '<span class="pill ' + ST_CLASS[r.status] + '">' + (r.status === 'approved' ? 'معتمدة' : ST_LABEL[r.status]) + '</span>') + '</td></tr>'; }).join('') + '</tbody></table></div>' : '<div class="empty">لا توجد سلف.</div>') + '</section>';
+}
 
 /* custody */
 const CUST_CATS = ['لابتوب', 'جوال', 'شاشة', 'جهاز لوحي', 'سيارة', 'بطاقة دخول', 'أدوات وأجهزة', 'أخرى'];
@@ -1615,6 +1700,112 @@ VIEWS.admin = function () {
   return h;
 };
 
+/* ---------- new-employee handbook ---------- */
+const HB = [
+  { id: 'welcome', t: 'أهلاً بك في الفريق', s: 'أسبوعك الأول خطوة بخطوة' },
+  { id: 'hiring', t: 'طلب التوظيف والاستقدام من الخارج', s: 'م ٣٢ · ٣٣ · ٣٧ · ٤٠ · ٥٣' },
+  { id: 'eos', t: 'حساب مكافأة نهاية الخدمة', s: 'م ٨٤ · ٨٧ · ٨٨' },
+  { id: 'resign', t: 'مستحقات الاستقالة', s: 'م ٧٥ · ٧٩ مكرر · ٨٥ · ١١١' },
+  { id: 'advance', t: 'السلف وحد الحسم من الراتب', s: 'م ٩٢ · ٩٣' },
+  { id: 'sick', t: 'الإجازة المرضية بعد ٣٠ يوماً', s: 'م ٨٢ · ١١٧' },
+  { id: 'reports', t: 'رفع تقارير الأداء الأسبوعية والشهرية', s: 'داخل النظام' },
+  { id: 'wrong', t: 'تنبيه: أخطاء الإنهاء الشائعة', s: 'م ٥٣ · ٦٩ · ٧١ · ٧٦ · ٧٧ · ٨٠ · ٨٢ · ١٥٥', warn: 1 },
+  { id: 'penalty', t: 'الشروط الجزائية في العقود', s: 'م ٨ · ٤٨ · ٦٦–٧٠ · ٧٧ · ٨٣' }
+];
+const hbStep = (n, t, d) => '<div class="hb-step"><span class="hb-n">' + n + '</span><div><b>' + t + '</b>' + (d ? '<p>' + d + '</p>' : '') + '</div></div>';
+const law = (a) => '<span class="law">م ' + a + '</span>';
+function logoHtml(cls) { const id = S.settings.logoId, src = id ? '/_blob/' + id : (window.HR_CONFIG && window.HR_CONFIG.logo) || ''; return src ? '<img class="' + (cls || 'brand-logo') + '" src="' + esc(src) + '" alt="' + esc(S.settings.company) + '">' : ''; }
+function hbCalcEOS() {
+  const w = +(S.hb.w || 10000), y = +(S.hb.y || 3), r = S.hb.r || 'resign';
+  const c = eosCalc(w, y, r);
+  return '<div class="calc"><div class="calc-in"><label class="f">الأجر الشهري الأخير (شامل البدلات الثابتة)<input class="in num" type="number" min="0" data-hb="w" value="' + w + '"></label><label class="f">مدة الخدمة (سنوات، تقبل الكسور)<input class="in num" type="number" min="0" step="0.25" data-hb="y" value="' + y + '"></label><label class="f">سبب انتهاء العلاقة<select class="in" data-hb="r">' + [['employer', 'إنهاء من المنشأة / انتهاء العقد / اتفاق'], ['resign', 'استقالة'], ['art87', 'قوة قاهرة / خلال ٦ أشهر من الزواج / ٣ أشهر من الولادة'], ['art80', 'فصل وفق المادة ٨٠']].map(o => '<option value="' + o[0] + '" ' + (r === o[0] ? 'selected' : '') + '>' + o[1] + '</option>').join('') + '</select></label></div>' +
+    '<div class="calc-out"><span>المكافأة الكاملة</span><b class="num">' + money(c.full) + '</b><span>المستحق</span><b class="num big">' + money(c.due) + '</b><small>' + esc(c.note) + '</small></div></div>';
+}
+function hbCalcSick() {
+  const d = Math.max(0, +(S.hb.d || 45)), w = +(S.hb.sw || 9000), day = w / 30;
+  const full = Math.min(d, 30), q = Math.min(Math.max(d - 30, 0), 60), z = Math.min(Math.max(d - 90, 0), 30), over = Math.max(d - 120, 0);
+  return '<div class="calc"><div class="calc-in"><label class="f">مجموع أيام الإجازة المرضية في السنة المرضية<input class="in num" type="number" min="0" data-hb="d" value="' + d + '"></label><label class="f">الأجر الشهري<input class="in num" type="number" min="0" data-hb="sw" value="' + w + '"></label></div>' +
+    '<div class="calc-out"><div class="tiers"><div class="tier ok"><b class="num">' + full + '</b><span>يوم بأجر كامل</span><small class="num">' + money(full * day) + '</small></div><div class="tier warn"><b class="num">' + q + '</b><span>يوم بثلاثة أرباع الأجر</span><small class="num">' + money(q * day * 0.75) + '</small></div><div class="tier bad"><b class="num">' + z + '</b><span>يوم بدون أجر</span><small class="num">٠ ر.س</small></div></div>' + (over ? '<small style="color:var(--bad)">تجاوز ١٢٠ يوماً في نفس السنة المرضية: انتهت المدد النظامية للإجازة المرضية.</small>' : '<small>إجمالي ما يُصرف عن فترة المرض: <b class="num">' + money(full * day + q * day * 0.75) + '</b></small>') + '</div></div>';
+}
+function hbCalcAdv() {
+  const w = +(S.hb.aw || 8000), a = +(S.hb.aa || 5000), cap = w * 0.10, months = cap ? Math.ceil(a / cap) : 0;
+  return '<div class="calc"><div class="calc-in"><label class="f">الأجر الشهري<input class="in num" type="number" min="0" data-hb="aw" value="' + w + '"></label><label class="f">مبلغ السلفة<input class="in num" type="number" min="0" data-hb="aa" value="' + a + '"></label></div>' +
+    '<div class="calc-out"><span>أعلى قسط شهري مسموح (١٠٪)</span><b class="num big">' + money(cap) + '</b><span>أقل عدد أقساط</span><b class="num">' + months + ' شهر</b></div></div>';
+}
+VIEWS.handbook = function () {
+  S.hb = S.hb || {};
+  const q = (S.hbQ || '').trim();
+  const show = (id) => !q || (HB.find(x => x.id === id).t + ' ' + (S.hbText && S.hbText[id] || '')).includes(q);
+  const sec = (id, body) => { const m = HB.find(x => x.id === id); if (!show(id)) return ''; return '<section class="card hb-sec' + (m.warn ? ' hb-warn' : '') + '" id="hb-' + id + '"><div class="hb-head"><span class="hb-idx num">' + String(HB.indexOf(m) + 1).padStart(2, '0') + '</span><div><h2>' + m.t + '</h2><span class="small muted">' + (m.warn ? '' : 'نظام العمل · ') + m.s + '</span></div></div>' + body + '</section>'; };
+  let h = '<section class="hb-cover">' + (logoHtml('hb-logo') || '<div class="logo hb-logo-txt">' + esc((S.settings.company || 'م')[0]) + '</div>') + '<div><span class="hb-kicker">دليل الموظف الجديد</span><h1>كل ما تحتاجه في ' + esc(S.settings.company) + '، بوضوح</h1><p>مرجع مختصر مبني على نظام العمل السعودي وتعديلاته الأخيرة، مع حاسبات جاهزة وأمثلة محلولة.</p></div></section>';
+  h += '<div class="hb-toc">' + HB.map((x, i) => '<button class="hb-chip' + (x.warn ? ' warn' : '') + '" data-hbgo="' + x.id + '"><span class="num">' + (i + 1) + '</span>' + x.t + '</button>').join('') + '</div>';
+  h += '<input class="in hb-search" id="hbq" placeholder="ابحث في الدليل: سلفة، استقالة، مرضية…" value="' + esc(S.hbQ || '') + '">';
+
+  h += sec('welcome', '<div class="hb-steps">' +
+    hbStep(1, 'فعّل حسابك في النظام', 'سجّل بإيميل العمل، وانتظر تفعيل الموارد البشرية لحسابك وتحديد مديرك.') +
+    hbStep(2, 'وقّع عقدك واقبله في قوى', 'العقد يُكتب من نسختين ويُوثَّق إلكترونياً ' + law('٥١') + '. ادخل حسابك في قوى واقبل العقد عشان يكتمل التوثيق.') +
+    hbStep(3, 'استلم عهدتك', 'تُسجَّل كل عهدة باسمك مع حالتها وملحقاتها. راجعها وتأكد من سلامتها، لأنك مسؤول عن المحافظة عليها وإعادتها ' + law('٦٥') + '.') +
+    hbStep(4, 'اعرف فترة التجربة', 'يجب النص عليها صراحة في العقد، ولا يتجاوز مجموعها ١٨٠ يوماً، ولكل من الطرفين إنهاء العقد خلالها ' + law('٥٣') + '. وتحدد اللائحة الإجازات التي لا تدخل في حسابها.') +
+    hbStep(5, 'كل طلباتك من النظام', 'الإجازة والاستئذان والسلفة والعهد، وتشوف وين واقف طلبك ولماذا.') + '</div>');
+
+  h += sec('hiring', '<h3>أولاً: رفع طلب التوظيف داخل النظام</h3><div class="hb-steps">' +
+    hbStep(1, 'مدير القسم يرفع «طلب توظيف»', 'من «طلب جديد» ← «طلب توظيف»: المسمى، والقسم، والعدد، والراتب المقترح، ومبرر الاحتياج، مع الوصف الوظيفي.') +
+    hbStep(2, 'الموارد البشرية تراجع', 'أثر الوظيفة على نسبة التوطين (نطاقات)، ونطاق الراتب، وهل يمكن شغلها بسعودي أولاً.') +
+    hbStep(3, 'اعتماد الرئيس التنفيذي', 'بعد الاعتماد تُفتح الوظيفة في «الاستقطاب والتوظيف» ويبدأ مسار المرشحين.') + '</div>' +
+    '<h3>ثانياً: الاستقدام من الخارج</h3><div class="hb-steps">' +
+    hbStep(1, 'موافقة الوزارة', 'لا يجوز الاستقدام بقصد العمل إلا بعد موافقة الوزارة ' + law('٣٢') + '. تُطلب التأشيرة عبر منصة قوى بعد التأكد من أهلية المنشأة في نطاقات.') +
+    hbStep(2, 'مكتب استقدام مرخّص (اختياري)', 'إذا استعنتم بمكتب، فيجب أن يكون مرخصاً من الوزارة ' + law('٣٠') + '، ويبقى العامل مرتبطاً بالمنشأة بعلاقة عقدية مباشرة ' + law('٣١') + '.') +
+    hbStep(3, 'عقد مكتوب ومحدد المدة', 'عقد غير السعودي يجب أن يكون مكتوباً ومحدد المدة، وإذا خلا من المدة تُعد سنة من تاريخ المباشرة ' + law('٣٧') + '.') +
+    hbStep(4, 'بعد الوصول', 'إصدار الإقامة ورخصة العمل ' + law('٣٣') + '، والتسجيل في التأمينات الاجتماعية، والتأمين الطبي، وفتح حساب بنكي لصرف الراتب عبر حماية الأجور.') +
+    hbStep(5, 'التجربة والأونبوردنق', 'تبدأ فترة التجربة إن نُص عليها، ويُسجَّل الموظف في النظام وتُسلَّم عهدته.') + '</div>' +
+    '<div class="callout"><b>تكاليف تتحملها المنشأة ' + law('٤٠') + '</b><div class="pills">' + ['رسوم الاستقدام', 'رسوم الإقامة ورخصة العمل وتجديدهما', 'غرامات التأخير', 'رسوم تغيير المهنة', 'الخروج والعودة', 'تذكرة العودة لموطنه بعد انتهاء العلاقة', 'رسوم نقل الخدمات'].map(x => '<span class="pill">' + x + '</span>').join('') + '</div><small>ويتحمل العامل تكاليف عودته إذا لم يكن لائقاً للعمل، أو رغب في العودة دون سبب مشروع.</small></div>');
+
+  h += sec('eos', '<div class="formula"><span>المعادلة</span><b>نصف أجر شهر × كل سنة من أول ٥ سنوات</b><b>+ أجر شهر كامل × كل سنة بعدها</b><small>تُحسب على آخر أجر، وتُحسب أجزاء السنة بنسبة ما قضاه العامل ' + law('٨٤') + '</small></div>' +
+    '<div class="example"><b>مثال:</b> أجر ١٠,٠٠٠ ريال وخدمة ٧ سنوات: (٥ × ٥,٠٠٠) + (٢ × ١٠,٠٠٠) = <b>٤٥,٠٠٠ ريال</b></div>' +
+    '<div class="grid g2"><div class="case ok"><b>يستحقها كاملة</b><ul><li>إنهاء العقد من المنشأة أو انتهاء مدته</li><li>ترك العمل بسبب إخلال صاحب العمل ' + law('٨١') + '</li><li>قوة قاهرة، أو العاملة خلال ٦ أشهر من زواجها أو ٣ أشهر من الولادة ' + law('٨٧') + '</li></ul></div><div class="case bad"><b>لا يستحقها</b><ul><li>الفصل وفق إحدى حالات المادة ٨٠</li><li>إنهاء العقد خلال فترة التجربة: لكل طرف حق الإنهاء فيها ' + law('٥٣') + '، ولا يستحق أي منهما تعويضاً ولا يستحق العامل مكافأة ' + law('٥٤') + '</li><li>الاستقالة قبل إكمال سنتين ' + law('٨٥') + '</li></ul></div></div>' +
+    '<h3>جرّب الحاسبة</h3>' + hbCalcEOS() + '<p class="small muted">تُصرف المستحقات خلال أسبوع من انتهاء العلاقة، وخلال أسبوعين إذا كان العامل هو من أنهى العقد ' + law('٨٨') + '.</p>');
+
+  h += sec('resign', '<div class="tbl"><div class="tr th"><span>مدة الخدمة</span><span>نسبة المكافأة عند الاستقالة ' + law('٨٥') + '</span></div><div class="tr"><span>أقل من سنتين</span><b>لا شيء</b></div><div class="tr"><span>من ٢ إلى أقل من ٥ سنوات</span><b>الثلث</b></div><div class="tr"><span>من ٥ إلى أقل من ١٠ سنوات</span><b>الثلثان</b></div><div class="tr"><span>١٠ سنوات فأكثر</span><b>كاملة</b></div></div>' +
+    '<h3>ماذا يُصرف للمستقيل؟</h3><div class="hb-steps">' + hbStep('١', 'نسبته من المكافأة', 'حسب الجدول أعلاه.') + hbStep('٢', 'أجر الإجازات المستحقة', 'يستحق أجر أيام الإجازة السنوية التي لم يستخدمها، وعن أجزاء السنة بنسبة ما قضاه ' + law('١١١') + '.') + hbStep('٣', 'أجره حتى آخر يوم عمل', 'بما فيه فترة الإشعار.') + hbStep('٤', 'شهادة خدمة', 'مجاناً عند طلبه، ولا يجوز تضمينها ما يسيء إليه ' + law('٦٤') + '.') + '</div>' +
+    '<div class="callout"><b>إجراءات الاستقالة</b><ul><li>الإشعار الكتابي ٣٠ يوماً على الأقل إذا كان العقد غير محدد المدة ' + law('٧٥') + '.</li><li>تُعد الاستقالة مقبولة إذا مضى ٣٠ يوماً دون رد، وللمنشأة تأجيل القبول حتى ٦٠ يوماً بإيضاح مكتوب مسبَّب ' + law('٧٩ مكرر') + '.</li><li>يحق للموظف العدول عنها خلال ٧ أيام من تقديمها ما لم تُقبل، ولا يصح تحديد تاريخ مؤجل لها.</li></ul></div>' +
+    '<p class="small muted">احسبها مباشرة من الحاسبة في قسم المكافأة، واختر «استقالة».</p>');
+
+  h += sec('advance', '<div class="formula"><span>القاعدة</span><b>القسط الشهري للسلفة ≤ ١٠٪ من أجر الموظف</b><small>استرداد قروض صاحب العمل لا يتجاوز ما يُحسم منه ١٠٪ من الأجر ' + law('٩٢') + '، ومجموع كل الحسميات لا يتجاوز نصف الأجر ' + law('٩٣') + '.</small></div>' +
+    '<div class="example"><b>مثال:</b> أجر ٨,٠٠٠ ريال وسلفة ٥,٠٠٠ ريال: أعلى قسط ٨٠٠ ريال، فأقل مدة سداد <b>٧ أشهر</b>.</div>' + hbCalcAdv() +
+    '<div class="callout"><b>داخل النظام</b><ul><li>ارفع «سلفة» من «طلب جديد»، والنظام يحسب نسبة القسط من أجرك تلقائياً.</li><li>تمر على الموارد البشرية ثم المالية، والرئيس التنفيذي إذا تجاوز المبلغ حد الصلاحية.</li><li>لا تُعتمد سلفة جديدة وعليك سلفة قائمة.</li></ul></div>');
+
+  h += sec('sick', '<div class="tiers big"><div class="tier ok"><b>٣٠</b><span>يوم الأولى</span><small>بأجر كامل</small></div><div class="tier warn"><b>٦٠</b><span>يوم التالية</span><small>بثلاثة أرباع الأجر</small></div><div class="tier bad"><b>٣٠</b><span>يوم بعدها</span><small>بدون أجر</small></div></div>' +
+    '<p>تُحسب خلال <b>السنة المرضية الواحدة</b> التي تبدأ من تاريخ أول إجازة مرضية، متصلة كانت أو متقطعة ' + law('١١٧') + '. يعني إذا تعدّت الإجازات ٣٠ يوماً، فكل يوم بعدها يُدفع بـ ٧٥٪ من الأجر اليومي حتى اليوم ٩٠، ثم بدون أجر حتى اليوم ١٢٠.</p>' +
+    '<div class="example"><b>مثال:</b> أجر ٩,٠٠٠ ريال (٣٠٠ يومياً) ومرض ٤٥ يوماً في السنة: ٣٠ يوماً × ٣٠٠ = ٩,٠٠٠، و١٥ يوماً × ٢٢٥ = ٣,٣٧٥. المجموع <b>١٢,٣٧٥ ريال</b>.</div>' + hbCalcSick() +
+    '<div class="callout warn"><b>مهم</b><ul><li>لا يجوز إنهاء خدمة الموظف بسبب المرض قبل استنفاد هذه المدد، وله أن يطلب وصل إجازته السنوية بالمرضية ' + law('٨٢') + '.</li><li>الإجازة تثبت بتقرير طبي معتمد (صحتي)، ويرفعه الموظف مع طلب الإجازة.</li></ul></div>');
+
+  h += sec('reports', '<div class="grid g2"><div class="case"><b>التقرير الأسبوعي</b><ul><li>يُرفع قبل نهاية دوام الخميس.</li><li>يغطي أسبوع الأحد إلى الخميس.</li></ul></div><div class="case"><b>التقرير الشهري</b><ul><li>يُرفع في آخر يوم عمل من الشهر.</li><li>ملخص الإنجازات والمؤشرات وخطة الشهر القادم.</li></ul></div></div>' +
+    '<div class="hb-steps">' + hbStep(1, 'افتح «تقارير الإنجاز» ثم «رفع تقرير»', 'اختر النوع: أسبوعي أو شهري أو إنجاز مشروع.') + hbStep(2, 'اكتب بوضوح', 'وش اشتغلت عليه، وأبرز إنجازاتك بأرقام إن أمكن، والصعوبات، ووش تحتاج من الإدارة، وخطتك القادمة.') + hbStep(3, 'قيّم أداءك وأرفق الملفات', 'تقييم ذاتي من ١ إلى ٥، ومرفقات مثل العروض أو لقطات النتائج.') + hbStep(4, 'تابع رد مديرك', 'يظهر لك «تمت المراجعة» مع ملاحظة المدير على التقرير.') + '</div><p class="small muted">مواعيد التسليم أعلاه سياسة داخلية مقترحة، وتعدّلها الموارد البشرية حسب احتياج المنشأة.</p>');
+
+  h += sec('wrong', '<p class="muted" style="margin-top:0">هذه أكثر الأخطاء اللي تكلّف المنشأة تعويضات أمام المحكمة العمالية. راجعها قبل أي إنهاء.</p><div class="wlist">' + [
+    ['إنهاء بدون إشعار', 'الإشعار ٦٠ يوماً من المنشأة و٣٠ من الموظف للعقد غير محدد المدة ' + law('٧٥') + '. إذا لم يُراعَ، يُدفع أجر مدة الإشعار ' + law('٧٦') + '.'],
+    ['إنهاء بدون سبب مشروع', 'تعويض أجر ١٥ يوماً عن كل سنة للعقد غير محدد المدة، أو أجر المدة الباقية للعقد المحدد، وبحد أدنى أجر شهرين ' + law('٧٧') + '.'],
+    ['فصل بالمادة ٨٠ بدون إجراءات', 'لازم تُعطى للموظف فرصة لإبداء أسباب اعتراضه ' + law('٨٠') + '، ولا يوقَّع جزاء إلا بعد إبلاغه كتابة والتحقيق معه وتدوين دفاعه في محضر ' + law('٧١') + '.'],
+    ['فصل للغياب بدون إنذار', 'الغياب دون سبب مشروع أكثر من ٣٠ يوماً خلال السنة العقدية أو ١٥ يوماً متتالية، ويشترط إنذار كتابي بعد ٢٠ يوماً في الأولى و١٠ أيام في الثانية ' + law('٨٠') + '.'],
+    ['الفصل أثناء المرض', 'ممنوع قبل استنفاد مدد الإجازة المرضية ' + law('٨٢') + '.'],
+    ['فصل العاملة الحامل أو في إجازة الوضع', 'ممنوع، ويشمل مدة المرض الناشئ عنهما بشهادة طبية بما لا يتجاوز ١٨٠ يوماً ' + law('١٥٥') + '.'],
+    ['تجربة مخالفة', 'التجربة لازم تكون منصوصاً عليها في العقد ولا تتجاوز ١٨٠ يوماً ' + law('٥٣') + '، ولا تُكرر لدى نفس صاحب العمل إلا باتفاق مكتوب في مهنة أخرى أو بعد ٦ أشهر من انتهاء العلاقة ' + law('٥٤') + '.'],
+    ['تأخير التحقيق والجزاء', 'لا يجوز اتهام الموظف بمخالفة مضى على كشفها أكثر من ٣٠ يوماً، ولا توقيع الجزاء بعد ٣٠ يوماً من انتهاء التحقيق ' + law('٦٩') + '.'],
+    ['تأخير المستحقات', 'التصفية خلال أسبوع، أو أسبوعين إذا أنهى الموظف العقد ' + law('٨٨') + '. ويجوز للمحكمة تغريم المنشأة حتى ضعف المبلغ المتأخر ' + law('٩٤') + '.']
+  ].map(x => '<div class="witem"><span class="wic">!</span><div><b>' + x[0] + '</b><p>' + x[1] + '</p></div></div>').join('') + '</div><div class="callout"><b>قبل أي إنهاء، تحقق من:</b><ul><li>السبب موثّق ومشروع ومطابق لنص المادة.</li><li>الإنذارات والتحقيق مكتوبة وموقّعة.</li><li>الإشعار أو بدله محسوب.</li><li>العهد مستلمة والمستحقات جاهزة في موعدها.</li></ul></div>');
+
+  h += sec('penalty', '<div class="hb-steps">' +
+    hbStep('١', 'أي شرط يخالف النظام باطل', 'إلا إذا كان أكثر فائدة للعامل ' + law('٨') + '. فلا يصح مثلاً شرط يُسقط مكافأة نهاية الخدمة أو يزيد الحسم عن الحد النظامي.') +
+    hbStep('٢', 'تعويض محدد في العقد', 'يجوز أن ينص العقد على تعويض محدد عند الإنهاء لسبب غير مشروع، وإلا طُبّق التعويض النظامي ' + law('٧٧') + '.') +
+    hbStep('٣', 'شرط عدم المنافسة وعدم الإفشاء', 'يصح إذا كان مكتوباً ومحدداً من حيث الزمان والمكان ونوع العمل، ولا تزيد مدته على سنتين من انتهاء العلاقة. وللمنشأة رفع الدعوى خلال سنة من اكتشاف المخالفة ' + law('٨٣') + '.') +
+    hbStep('٤', 'شرط استرداد تكاليف التدريب', 'بعد إكمال التدريب يجوز إلزام المتدرب بالعمل مدة مماثلة لمدة التدريب، فإن امتنع يدفع تكاليف التدريب أو بنسبة المدة الباقية ' + law('٤٨') + '.') +
+    hbStep('٥', 'الجزاءات التأديبية', 'الإنذار، الغرامة، الحرمان من العلاوة أو تأجيل الترقية لمدة لا تزيد على سنة، الإيقاف عن العمل مع الحرمان من الأجر، الفصل في الحالات المقررة ' + law('٦٦') + '. ولا يوقَّع جزاء غير وارد في النظام أو لائحة تنظيم العمل ' + law('٦٧') + '.') + '</div>' +
+    '<div class="callout warn"><b>حدود الغرامات ' + law('٧٠') + '</b><ul><li>غرامة المخالفة الواحدة لا تتجاوز أجر ٥ أيام.</li><li>لا يُقتطع من أجر الموظف للغرامات أكثر من أجر ٥ أيام في الشهر.</li><li>الإيقاف بدون أجر لا يتجاوز ٥ أيام في الشهر.</li><li>لا يوقَّع أكثر من جزاء على المخالفة الواحدة.</li></ul></div>');
+
+  h += '<p class="small muted hb-foot">هذا الدليل مرجع مختصر لنظام العمل السعودي شاملاً تعديلات المرسوم الملكي م/٤٤ لعام ١٤٤٦هـ، وليس استشارة قانونية. في الحالات الخاصة أو قبل أي نزاع، ارجع لنص النظام ولائحته التنفيذية أو للمستشار القانوني.</p>';
+  return h;
+};
+
 /* team & settings */
 VIEWS.team = function () {
   const live = S.live;
@@ -1622,6 +1813,7 @@ VIEWS.team = function () {
     '<p class="small muted" style="margin-top:0">كل عضو يرى الطلبات ويتخذ القرار حسب دوره. للمدير المباشر: اربطيه بملفه الوظيفي ليصله طلبات فريقه فقط. ' + (S.sb ? 'أرسلي رابط النظام لفريقك، كل واحد ينشئ حسابه، وبعدها تضيفينه هنا وتحددين دوره.' : 'ولازم يكون الرابط مشارك معه بصلاحية «مساهم» عشان يقدر يعتمد ويرفع طلبات.') + '</p>' +
     (live ? (S.data.team.length ? '<div class="scroll"><table class="tb"><thead><tr><th>العضو</th><th>الدور</th><th>الملف الوظيفي</th><th></th></tr></thead><tbody>' + S.data.team.map(t => '<tr><td>' + esc(userName(t.id) || 'عضو') + '</td><td><select class="in" data-trole="' + esc(t.id) + '">' + ['hr', 'manager', 'finance', 'ceo', 'employee'].map(r => '<option value="' + r + '" ' + (t.role === r ? 'selected' : '') + '>' + ROLES[r] + '</option>').join('') + '</select></td><td><select class="in" data-temp="' + esc(t.id) + '"><option value="">—</option>' + S.data.employees.map(e => '<option value="' + esc(e.id) + '" ' + (t.empId === e.id ? 'selected' : '') + '>' + esc(e.name) + '</option>').join('') + '</select></td><td><button class="btn sm bad" data-tdel="' + esc(t.id) + '">إزالة</button></td></tr>').join('') + '</tbody></table></div>' : '<div class="empty">لم تضيفي أعضاء بعد. أنتِ مديرة النظام تلقائياً.</div>') : '<div class="empty">إدارة الأعضاء تعمل في الرابط المنشور فقط.</div>') + '</section>' +
     '<section class="card"><div class="card-h"><h2>الإعدادات</h2></div><div class="form"><label class="f">اسم المنشأة<input class="in" id="setCompany" value="' + esc(S.settings.company) + '"></label><label class="f">حد صلاحية الرئيس التنفيذي (ر.س)<input class="in num" id="setCeo" type="number" min="0" value="' + esc(S.settings.ceoThreshold) + '"></label><div class="full small muted">أي سلفة أو طلب صرف أو دفعة عمالية تتجاوز هذا المبلغ تمر تلقائياً على الرئيس التنفيذي.</div>' + fld('setOwnerEmp', 'ملفك الوظيفي (لتظهر لك مهام وتقارير فريقك)', 'select', S.settings.ownerEmpId || '', { opts: [['', '—']].concat(S.data.employees.map(e => [e.id, e.name])) }) + fld('setNit', 'نطاق المنشأة في نطاقات (من قوى)', 'select', S.settings.nitaqat || 'البلاتيني', { opts: BANDS }) + fld('setWps', 'توجد ملاحظات في حماية الأجور (مدد)؟', 'select', S.settings.wps || 'لا', { opts: ['لا', 'نعم'] }) + '<div class="full"><button class="btn pri" data-savesettings="1">حفظ الإعدادات</button></div></div></section>' +
+    (window.claude && !S.sb ? '<section class="card"><div class="card-h"><h2>شعار المنشأة</h2><span class="sp"></span>' + logoHtml('set-logo') + '</div><p class="small muted" style="margin-top:0">ارفعي ملف الشعار الرسمي (PNG بخلفية شفافة أو SVG) ليظهر في القائمة وغلاف دليل الموظف.</p><button class="btn" data-logoup="1">رفع الشعار</button></section>' : '') +
     '<section class="card"><div class="card-h"><h2>البيانات التجريبية</h2></div><p class="small muted" style="margin-top:0">لعرض النظام في الاجتماعات. السجلات التجريبية معلّمة ويمكن حذفها كلها بضغطة قبل البدء بالبيانات الحقيقية.</p><div class="toolbar"><button class="btn" data-demo="load">تحميل بيانات تجريبية</button><button class="btn bad" data-demo="clear">حذف كل البيانات التجريبية</button></div></section>';
 };
 
@@ -1663,6 +1855,7 @@ function reqSheet(id) {
   if (r.months) fields.push(['الأقساط', r.months + ' أشهر · ' + money(r.amount / r.months) + ' شهرياً']);
   if (r.type === 'advance' && emp(r.employeeId)) fields.push(['القسط من إجمالي الأجر', Math.round((r.amount / r.months) * 100 / (wage(emp(r.employeeId)) || 1)) + '٪']);
   if (r.category) fields.push(['البند', r.category]);
+  if (r.docType) fields.push(['المستند', r.docType]);
   if (r.dueDate) fields.push(['تاريخ الاستحقاق', fmtD(r.dueDate)]);
   if (r.ref) fields.push(['رقم السداد', r.ref]);
   if (r.vendor) fields.push(['الجهة', r.vendor]);
@@ -1740,7 +1933,7 @@ const fld = (id, label, type, val, extra) => '<label class="f ' + (extra && extr
 const empOpts = (blank) => (blank ? [['', blank]] : []).concat(S.data.employees.filter(e => e.status !== 'منتهي').map(e => [e.id, e.name]));
 const vals = (ids) => { const o = {}; ids.forEach(k => { const el = $('#f_' + k); if (el) o[k] = el.type === 'number' ? (el.value === '' ? '' : +el.value) : el.value.trim(); }); return o; };
 
-function newRequestSheet(type, forEmp) {
+function newRequestSheet(type, forEmp, preset) {
   S.modal = { kind: 'form' };
   if (!type) {
     const allowed = Object.keys(TYPES).filter(k => role() === 'employee' ? TYPES[k].group === 'self' || k === 'advance' : role() === 'finance' ? ['gov_payment', 'labor_payment', 'expense'].includes(k) : true);
@@ -1756,8 +1949,8 @@ function newRequestSheet(type, forEmp) {
   if (type === 'permission') f = empF(1) + fld('f_date', 'التاريخ', 'date', T) + fld('f_fromTime', 'من الساعة', 'time', '13:00') + fld('f_toTime', 'إلى الساعة', 'time', '15:00') + fld('f_reason', 'السبب', 'textarea', '', { full: 1 });
   if (type === 'advance') f = empF(1) + fld('f_amount', 'المبلغ (ر.س)', 'number', '') + fld('f_months', 'عدد الأقساط (شهور)', 'number', 4) + fld('f_reason', 'السبب', 'textarea', '', { full: 1 });
   if (type === 'expense') f = empF(0) + fld('f_amount', 'المبلغ (ر.س)', 'number', '') + fld('f_vendor', 'الجهة المستفيدة', 'text', '') + fld('f_dueDate', 'تاريخ الاستحقاق', 'date', addDays(T, 7)) + fld('f_reason', 'الغرض', 'textarea', '', { full: 1 });
-  if (type === 'gov_payment') f = fld('f_category', 'البند', 'select', GOV_CATS[0], { opts: GOV_CATS }) + empF(0) + fld('f_amount', 'المبلغ (ر.س)', 'number', '') + fld('f_dueDate', 'تاريخ الاستحقاق', 'date', addDays(T, 7)) + fld('f_ref', 'رقم فاتورة سداد', 'text', '') + fld('f_reason', 'ملاحظات', 'textarea', '', { full: 1 });
-  if (type === 'labor_payment') f = fld('f_category', 'البند', 'select', LABOR_CATS[0], { opts: LABOR_CATS }) + empF(0) + fld('f_amount', 'المبلغ (ر.س)', 'number', '') + fld('f_dueDate', 'تاريخ الاستحقاق', 'date', addDays(T, 7)) + fld('f_reason', 'ملاحظات', 'textarea', '', { full: 1 });
+  if (type === 'gov_payment') f = fld('f_category', 'البند', 'select', preset || GOV_CATS[0], { opts: GOV_CATS }) + (preset === CHAMBER ? fld('f_docType', 'المستند المطلوب تصديقه', 'select', CHAMBER_DOCS[0], { opts: CHAMBER_DOCS }) : '') + empF(0) + fld('f_amount', 'المبلغ (ر.س)', 'number', '') + fld('f_dueDate', 'تاريخ الاستحقاق', 'date', addDays(T, 7)) + fld('f_ref', 'رقم فاتورة سداد', 'text', '') + fld('f_reason', 'ملاحظات', 'textarea', '', { full: 1 });
+  if (type === 'labor_payment') f = fld('f_category', 'البند', 'select', preset || LABOR_CATS[0], { opts: LABOR_CATS }) + empF(0) + fld('f_amount', 'المبلغ (ر.س)', 'number', '') + fld('f_dueDate', 'تاريخ الاستحقاق', 'date', addDays(T, 7)) + fld('f_reason', 'ملاحظات', 'textarea', '', { full: 1 });
   if (type === 'bonus') f = empF(1) + fld('f_amount', 'مبلغ المكافأة (ر.س)', 'number', '') + fld('f_reason', 'الإنجاز المستحق للمكافأة', 'textarea', '', { full: 1 });
   if (type === 'raise') f = empF(1) + fld('f_newBasic', 'الراتب الأساسي الجديد (ر.س)', 'number', '') + fld('f_effective', 'تاريخ السريان', 'date', addDays(T, 30)) + fld('f_reason', 'المبرر', 'textarea', '', { full: 1 }) + '<p class="small muted full" style="margin:0">عند الاعتماد النهائي يُحدَّث الأساسي، وتُعدَّل بدلات السكن والنقل بنفس النسبة.</p>';
   if (type === 'hiring') f = fld('f_position', 'المسمى الوظيفي', 'text', '') + fld('f_dept', 'القسم', 'select', DEPTS[1], { opts: DEPTS }) + fld('f_headcount', 'العدد', 'number', 1) + fld('f_budget', 'الراتب الشهري المقترح (ر.س)', 'number', '') + fld('f_employeeId', 'مدير القسم الطالب', 'select', me, { opts: empOpts('اختاري المدير') }) + fld('f_reason', 'مبرر الاحتياج', 'textarea', '', { full: 1 });
@@ -1766,7 +1959,7 @@ function newRequestSheet(type, forEmp) {
   updateRoutePreview(type);
 }
 function collectReq(type) {
-  const v = vals(['employeeId', 'leaveType', 'from', 'to', 'reason', 'date', 'fromTime', 'toTime', 'amount', 'months', 'vendor', 'dueDate', 'category', 'ref', 'newBasic', 'effective', 'position', 'dept', 'headcount', 'budget']);
+  const v = vals(['employeeId', 'leaveType', 'from', 'to', 'reason', 'date', 'fromTime', 'toTime', 'amount', 'months', 'vendor', 'dueDate', 'category', 'docType', 'ref', 'newBasic', 'effective', 'position', 'dept', 'headcount', 'budget']);
   Object.keys(v).forEach(k => { if (v[k] === '') delete v[k]; });
   v.type = type;
   if (type === 'leave' && v.from && v.to) v.days = daysBetween(v.from, v.to) + 1;
@@ -1781,6 +1974,7 @@ function validate(v) {
   if (v.type === 'permission' && !(v.hours > 0)) return 'وقت النهاية لازم يكون بعد وقت البداية.';
   if (['advance', 'expense', 'gov_payment', 'labor_payment', 'bonus'].includes(v.type) && !(v.amount > 0)) return 'أدخلي المبلغ.';
   if (v.type === 'raise' && !(v.newBasic > 0)) return 'أدخلي الراتب الأساسي الجديد.';
+  if (v.type === 'advance') { const e = emp(v.employeeId), cap = e ? wage(e) * 0.10 : 0; if (cap && v.amount / (v.months || 1) > cap) return 'القسط الشهري يتجاوز ١٠٪ من الأجر (م ٩٢). أقل عدد أقساط مسموح: ' + Math.ceil(v.amount / cap) + ' شهر.'; }
   if (v.type === 'hiring' && !v.position) return 'أدخلي المسمى الوظيفي.';
   return '';
 }
@@ -1872,7 +2066,7 @@ document.addEventListener('click', async (ev) => {
   if (d.more) { const navs = NAV.filter(n => n[3]()); sheet('كل الأقسام', '<div class="list">' + navs.map(n => '<button class="nav ' + (S.view === n[0] ? 'on' : '') + '" data-go="' + n[0] + '">' + ic(n[2]) + '<span>' + n[1] + '</span></button>').join('') + (S.sb ? '<button class="nav" data-signout="1">' + ic('x') + '<span>تسجيل الخروج</span></button>' : '') + '</div>'); S.modal = { kind: 'menu' }; return; }
   if (d.close) return closeModal();
   if (d.new) return newRequestSheet();
-  if (d.newtype) return newRequestSheet(d.newtype);
+  if (d.newtype) return newRequestSheet(d.newtype, null, d.cat);
   if (d.newfor) return newRequestSheet(null, d.newfor);
   if (d.pick) return newRequestSheet(d.pick, d.for);
   if (d.submitreq) { const v = collectReq(d.submitreq); const err = validate(v); if (err) return toast(err); t.disabled = true; const r = await createRequest(v); if (r) openModal({ kind: 'req', id: r.id, live: true }); else t.disabled = false; return; }
@@ -1923,6 +2117,8 @@ document.addEventListener('click', async (ev) => {
   if (d.rep) return openModal({ kind: 'rep', id: d.rep, live: true });
   if (d.review) { const r = S.data.reports.find(x => x.id === d.review); const note = (($('#rvNote') || {}).value || '').trim(); t.disabled = true; if (await save('reports', Object.assign({}, r, { status: 'تمت المراجعة', reviewNote: note, reviewedAt: new Date().toISOString(), reviewedBy: S.uid }))) toast('تمت المراجعة'); t.disabled = false; return; }
   if (d.qdetails) return complianceSheet();
+  if (d.hbgo) { const el = document.getElementById('hb-' + d.hbgo); if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+  if (d.logoup) { const inp = document.createElement('input'); inp.type = 'file'; inp.accept = 'image/png,image/jpeg,image/webp,image/svg+xml'; inp.onchange = async () => { const f = inp.files[0]; if (!f) return; let A = null; try { A = window.claude && await window.claude.use('assets'); } catch (e) { } if (!A) return toast('رفع الشعار متاح لمديرة النظام في رابط Claude. في نسخة GitHub ضعي ملف الشعار في المستودع.'); try { const r = await A.upload(f); const s = Object.assign({}, S.settings, { logoId: r.id }); await S.db.doc('config/settings').set(s); Object.assign(S.settings, s); toast('تم رفع الشعار'); schedule(); } catch (e) { toast('تعذّر رفع الشعار. استخدمي PNG أو SVG.'); } }; inp.click(); return; }
   if (d.whoGo) { S.taskWho = d.whoGo; S.taskF = 'open'; return go('tasks'); }
   if (d.export) { const rows = [['الاسم', 'المسمى', 'القسم', 'الجنسية', 'تاريخ المباشرة', 'نوع العقد', 'انتهاء العقد', 'الأساسي', 'السكن', 'النقل', 'الإجمالي', 'الحالة', 'موقع العمل']].concat(S.data.employees.map(e => [e.name, e.title, e.dept, e.nationality, e.joinDate, e.contractType, e.contractEnd, e.basic, e.housing, e.transport, wage(e), e.status, e.workLocation])); return csvDownload('employees-' + TODAY() + '.csv', rows); }
   if (d.addcust) return custForm();
@@ -1978,6 +2174,8 @@ document.addEventListener('change', async (ev) => {
 document.addEventListener('input', (ev) => {
   const t = ev.target, d = t.dataset;
   if (t.id === 'rq') { S.q = t.value; clearTimeout(t._t); t._t = setTimeout(() => { schedule(); setTimeout(() => { const el = $('#rq'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }, 30); }, 300); return; }
+  if (d.hb) { S.hb[d.hb] = t.value; const box = t.closest('.calc'); if (box) { const k = d.hb; const html = (k === 'w' || k === 'y' || k === 'r') ? hbCalcEOS() : (k === 'd' || k === 'sw') ? hbCalcSick() : hbCalcAdv(); const tmp = document.createElement('div'); tmp.innerHTML = html; box.querySelector('.calc-out').replaceWith(tmp.querySelector('.calc-out')); } return; }
+  if (t.id === 'hbq') { S.hbQ = t.value; clearTimeout(t._t); t._t = setTimeout(() => { schedule(); setTimeout(() => { const el = $('#hbq'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }, 30); }, 350); return; }
   if (t.id === 'eq') { S.empQ = t.value; clearTimeout(t._t); t._t = setTimeout(() => { schedule(); setTimeout(() => { const el = $('#eq'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }, 30); }, 300); return; }
   if (t.id === 'cq') { S.custQ = t.value; clearTimeout(t._t); t._t = setTimeout(() => { schedule(); setTimeout(() => { const el = $('#cq'); if (el) { el.focus(); el.setSelectionRange(el.value.length, el.value.length); } }, 30); }, 300); return; }
   if (S.modal && S.modal.rev) {
